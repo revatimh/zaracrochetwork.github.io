@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ & How to Order - Zara Crochet</title>
+  <link rel="stylesheet" href="faq.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header id="home-main-header">
+    <div class="home-header-container">
+      <div class="navbar-flex">
+      <h4><a href="index.html" class="home-logo-link" aria-label="Go to homepage">Zara Crochet Works</a></h4>
+    </div>
+    <div class="navbar-flex-mid">
+      <nav>
+        <ul class="home-nav-links">
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="tipsfacts.html">Crochet Tips</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="faq.html">How to Order</a></li>
+          <li><a href="zaracontact.html">Contact Us</a></li>
+          <li><a href="zaraanalytics.html">Page Analytics</a></li>
+        </ul>
+      </nav>
+      </div>
+      <div class="navbar-flex">
+      <a href="#" class="home-signup-btn" id="home-open-popup">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main class="main-content">
+    <h1>Need Help?</h1>
+    <p class="faq-subtitle">We're here to guide you through ordering, shipping, and everything in between.</p>
+
+    <!-- How to Order Section -->
+    <section class="faq-how-to-order">
+      <div class="faq-how-to-order-text">
+        <h2>How to Order</h2>
+        <ol>
+          <li><strong>Browse</strong> our shop and gallery for your favorite crochet items.</li>
+          <li><strong>Select</strong> items or send a custom request.</li>
+          <li><strong>Contact</strong> us via Instagram DM or email with your order details.</li>
+          <li><strong>Confirm</strong> your order, timeline, and payment method.</li>
+          <li><strong>Enjoy</strong> your handmade crochet, shipped with care!</li>
+        </ol>
+      </div>
+      <div class="faq-how-to-order-image">
+        <img src="faq image.jpg" alt="Crochet Ordering Process">
+      </div>
+    </section>
+
+    <div class="faq-list">
+      <div class="faq-item faq-box">
+        <button class="faq-question">
+          What is the delivery time?
+          <span class="faq-dropdown-icon">▼</span>
+        </button>
+        <div class="faq-answer">Orders ship in 5–7 business days. Custom orders take 10–14 days.</div>
+      </div>
+
+      <div class="faq-item faq-box">
+        <button class="faq-question">
+          Do you accept custom orders?
+          <span class="faq-dropdown-icon">▼</span>
+        </button>
+        <div class="faq-answer">Yes! We welcome custom colors, sizing, and patterns. Just message us to start.</div>
+      </div>
+
+      <div class="faq-item faq-box">
+        <button class="faq-question">
+          Can I return my order?
+          <span class="faq-dropdown-icon">▼</span>
+        </button>
+        <div class="faq-answer">Returns accepted within 7 days for unused items. Custom orders are final sale.</div>
+      </div>
+
+      <div class="faq-item faq-box">
+        <button class="faq-question">
+          Do you ship internationally?
+          <span class="faq-dropdown-icon">▼</span>
+        </button>
+        <div class="faq-answer">We ship worldwide! Rates vary by location. Message us for a quote.</div>
+      </div>
+
+      <div class="faq-item faq-box">
+        <button class="faq-question">
+          What payment methods do you accept?
+          <span class="faq-dropdown-icon">▼</span>
+        </button>
+        <div class="faq-answer">We accept PayPal, Canadian e-transfer, and other secure options.</div>
+      </div>
+    </div>
+
+<!-- Featured Questions Carousel Section -->
+    <section class="faq-featured-questions">
+  <h2>Featured Questions</h2>
+  <div class="faq-carousel-container">
+    <button class="faq-carousel-btn" id="faq-carousel-prev" aria-label="Previous question">←</button>
+
+    <div class="faq-carousel-cards">
+      <div class="faq-carousel-card faq-carousel-visible">
+        <h3>How long does shipping take?</h3>
+        <p>Standard orders ship within 5–7 business days; expedited options available.</p>
+      </div>
+      <div class="faq-carousel-card">
+        <h3>Can I customize my order?</h3>
+        <p>Absolutely! Send us your custom requests for colors, sizes, or patterns.</p>
+      </div>
+      <div class="faq-carousel-card">
+        <h3>What payment options are accepted?</h3>
+        <p>We accept PayPal, Canadian e-transfer, and other secure methods.</p>
+      </div>
+    </div>
+
+    <button class="faq-carousel-btn" id="faq-carousel-next" aria-label="Next question">→</button>
+  </div>
+</section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+      <h2>Have more questions?</h2>
+      <p style="text-align:center; color:#555;">Feel free to reach out — we'd love to help you!</p>
+      <form class="flexcontainer">
+        <label for="firstname">First name:</label>
+        <input type="text" id="firstname" name="firstname" required />
+
+        <label for="lastname">Last name:</label>
+        <input type="text" id="lastname" name="lastname" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write your question here..." required></textarea>
+
+        <input class="submitbutton" type="submit" value="Submit" />
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Zara Crochet | Handmade with <span style="color:#F88FB1">♥</span></p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Navbar toggle
+  function toggleMenu() {
+    const navMenu = document.getElementById('navMenu');
+    navMenu.classList.toggle('active');
+  }
+  window.toggleMenu = toggleMenu; // expose globally if used inline in HTML
+
+  // FAQ question toggle with icon rotation
+  const questions = document.querySelectorAll('.faq-question');
+  questions.forEach(button => {
+    button.addEventListener('click', () => {
+      const answer = button.nextElementSibling;
+      const icon = button.querySelector('.faq-dropdown-icon');
+      button.classList.toggle('active');
+      answer.classList.toggle('visible');
+
+      if (answer.classList.contains('visible')) {
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        icon.style.transform = 'rotate(0deg)';
+      }
+    });
+  });
+
+  // Featured Questions Carousel logic
+  const carouselCards = document.querySelectorAll('.faq-carousel-card');
+  const prevBtn = document.getElementById('faq-carousel-prev');
+  const nextBtn = document.getElementById('faq-carousel-next');
+  let currentIndex = 0;
+
+  function showCard(index) {
+    carouselCards.forEach((card, i) => {
+      card.classList.toggle('faq-carousel-visible', i === index);
+    });
+  }
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + carouselCards.length) % carouselCards.length;
+    showCard(currentIndex);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % carouselCards.length;
+    showCard(currentIndex);
+  });
+
+  // Show the first carousel card on load
+  showCard(currentIndex);
+});
+  </script>
+
+</body>
+</html>

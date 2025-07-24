@@ -45,8 +45,7 @@
 
 body {
     font-family: "Open Sans", sans-serif;
-    width: 75%;
-    margin: 2% auto;
+    margin: 0% 2% 2% 2% auto;
     background-color: #fffcf6;
     color: #333;
 }
@@ -76,6 +75,14 @@ h3 {
     color: #9b5de5;
 }
 
+h4 {
+  font-size: 20px;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: #9b5de5;
+}
+
 
 /* GENERAL COMMON STYLING ENDS 
 --------------------------------------------------------------------------------------------------------------------------------*/
@@ -87,104 +94,185 @@ h3 {
   max-width: 1200px;
   margin: auto;
   padding: 1rem;
+
 }
 
 /* Header */
 #home-main-header {
-  background: #f8f8f8;
   border-bottom: 1px solid #ddd;
-  padding: 1rem 0;
+  padding: 0px 20px;
+  background-color:#fffcf6;
+  
 }
+
+.navbar-flex{
+  width: 15%;
+  justify-content: end;
+}
+
+.navbar-flex-mid{
+  width: 60%;
+  margin: auto;
+    justify-content: end;
+}
+
+.home-logo-link {
+  text-decoration: none;   
+  color: inherit;
+
+}
+
 .home-header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 .home-nav-links {
+  margin: auto;
+  padding: 20px;
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 30px;
 }
+
+.home-nav-links :hover{
+   color: #af2a54;
+}
+
 .home-nav-links a {
   text-decoration: none;
-  color: #333;
+  color: black;
+  font-weight: 600
 }
 .home-signup-btn {
-  background: #111;
+  background: #9b5de5;
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   text-decoration: none;
 }
 
+.home-signup-btn:hover{
+  background: #331a51;
+}
+
 /* Banner */
 #home-landing-banner {
-  background: #eef0f6;
-  padding: 2rem 0;
-}
-.home-banner-content {
+  width: 100%;
+  height: 100vh; /* full screen height */
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
-.home-image-box {
-  width: 300px;
-  height: 200px;
-  background: #ccc;
+
+.home-banner-image {
+  background-image: url('imgs/home-lbanner.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2%;
+}
+
+.home-banner-text {
+  text-align: left;
+  color: rgb(0, 0, 0);
+  padding: 2rem;
+  border-radius: 8px;
+  font-size: large;
+  padding-top: 3rem; 
+}
+.home-banner-text a{
+margin-top: 10px;
+display: inline-block;
 }
 
 /* Sections */
+#home-best-sellers {
+  padding: 1rem 0 3rem;
+}
 .home-section-title {
   text-align: center;
   margin: 2rem 0 1rem;
 }
 .home-flex-row {
   display: flex;
-  flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: space-around;
 }
 .home-product-card, .home-blog-card {
-  flex: 1 1 30%;
-  background: #f4f4f4;
-  padding: 1rem;
-  border-radius: 6px;
+  width: 33%;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 15px;
   text-align: center;
+  overflow: hidden;
+}
+.home-product-card:hover
+{
+ border-color: #9b5de5; 
+}
+.home-product-card h3 {
+  margin-top: 1.5rem; 
+}
+.home-blog-card h3 {
+  margin-top: 1.5rem;
+}
+.home-blog-card:hover
+{
+ border-color: #9b5de5; 
 }
 .home-product-img {
   width: 100%;
-  height: 150px;
-  background: #ccc;
-  margin-bottom: 1rem;
+  height: 200px;
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-product-img-tag {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 /* Story */
 #home-our-story {
-  background: #eef0f6;
+  background-image: url('imgs/story-image.jpg');
+  background-size: cover;           
+  background-position: center;      
+  background-repeat: no-repeat;
   text-align: center;
-  padding: 3rem 0;
+  padding: 6rem 4rem;
 }
-.home-cta-btn {
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  background: #111;
+.home-story-content h2{
+color: white;
+
+}
+.home-story-content p {
+  margin-bottom: 3rem; 
+  font-size: large;
   color: white;
-  border: none;
-  border-radius: 4px;
 }
 
-/* Gallery */
-.home-gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+.home-cta-btn {
+  margin-top: 2rem;
+  padding: 1.5rem 3rem;
+  background: #F88FB1;
+  color: white;
+  border: none;
+  font-size: medium;
+  text-decoration: none;
 }
-.home-gallery-img {
-  background: #ccc;
-  height: 150px;
+.home-cta-btn:hover{ 
+background-color: #af2a54;
 }
 
 /* Footer */
@@ -402,6 +490,11 @@ h3 {
 
 
 /* TIPS AND FACTS PAGE STYLING BEGINS */
+
+.tnf-main-content{
+  width: 75%;
+  margin: auto;
+}
 
 #tnf-blog-heading {
     font-size: 25px;
@@ -743,6 +836,12 @@ background-color: #490c94;
 
 /* ABOUT US PAGE STYLING Ends
 ------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
 
 /* CONTACT US STYLING BEGINS */
 
