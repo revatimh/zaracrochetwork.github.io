@@ -1250,6 +1250,7 @@ background-color: #490c94;
   box-shadow: 0 4px 8px rgba(155, 93, 229, 0.4);
   transition: background-color 0.3s ease, transform 0.3s ease;
   user-select: none;
+  margin: 10px 0 0 0;
 }
 
 .faq-page .faq-carousel-btn:hover {
@@ -1257,26 +1258,17 @@ background-color: #490c94;
   transform: translateY(-2px);
 }
 
-
-  .faq-page .faq-carousel-btn {
-    margin: 10px 0 0 0;
-  }
-
-
-
+/* Fixed Form Width and Alignment */
 .faq-page form {
-  width: 400px; /* or whatever width you want */
-  margin: 40px auto; /* centers it horizontally */
+  width: 100%;
+  max-width: 400px;
+  margin: 40px auto;
   padding: 20px;
-  background-color: #fff; /* optional */
+  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
-
-
-
 
 .faq-page .contact-form-section {
   max-width: 700px;
@@ -1328,4 +1320,12 @@ background-color: #490c94;
 .faq-page .submitbutton:hover {
   background-color: #7b3fdc;
   transform: translateY(-2px);
+}
+
+.faq-page form,
+.faq-page input,
+.faq-page textarea {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
 }
