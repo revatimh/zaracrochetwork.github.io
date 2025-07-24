@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+</style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a class="aulink" href="#" class="logo">Zara Crochet</a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a class="aulink" href="home.html" class="nav-link">Home</a></li>
+        <li><a class="aulink" href="about.html" class="nav-link">About</a></li>
+        <li><a class="aulink" href="tipsfacts.html" class="nav-link">Tips and Facts</a></li>
+        <li><a class="aulink" href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a class="aulink" href="zaracontact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+
+
+    <div class="heading-gallery">
+        <h1>Zara's Crochet Gallery</h1>
+        <p class="subtitle-gallery">Handmade Crochet Items</p>
+    </div>
+
+
+
+    <div class="filterbar-gallery">
+        <button class="filter-btn-gallery active" data-filter="all">All</button>
+        <button class="filter-btn-gallery" data-filter="category1">Accessories</button>
+        <button class="filter-btn-gallery" data-filter="category2">Caps</button>
+        <button class="filter-btn-gallery" data-filter="category3">Footwear</button>
+        <button class="filter-btn-gallery" data-filter="category4">Toys</button>
+        <button class="filter-btn-gallery" data-filter="category5">Others</button>
+    </div>
+
+
+    <div class="gallery">
+        <div class="gallery-item" data-category="category1">
+
+            <div class="gallery-hover">
+                <img src="imgs/accessory1.png" alt="">
+                <div class="gallery-hover-description">
+                    <h3>Description</h3>
+                    <p>A set of hairclips designed for kids</p>
+                </div>
+            </div>
+            <h3 class="gallery-item-title">Clips</h3>
+            <p class="gallery-item-description">Colorful clips</p>
+            <span class="gallery-item-category">Accessories</span>
+            <br><br>
+            <a class="gallery-link" href="https://www.instagram.com/zara_crochet_work?igsh=ajl2MTV4dHB2NDFi&utm_source=qr"><button class="gallery-order-btn">  Order something similar</button></a>
+        </div>
+
+        <div class="gallery-item" data-category="category4">
+            <div class="gallery-hover">
+                <img src="imgs/toy1.png" alt="">
+                <div class="gallery-hover-description">
+                    <h3>Description</h3>
+                    <p>A cute white octopus toy</p>
+                </div>
+            </div>
+            <h3 class="gallery-item-title">Toys</h3>
+            <p class="gallery-item-description">White octopus</p>
+            <span class="gallery-item-category">Toys</span>
+            <br><br>
+            <a  class="gallery-link" href="https://www.instagram.com/zara_crochet_work?igsh=ajl2MTV4dHB2NDFi&utm_source=qr"><button class="gallery-order-btn">  Order something similar</button></a>
+        </div>
+
+        <div class="gallery-item" data-category="category2">
+            <div class="gallery-hover">
+                <img src="imgs/cap3.png" alt="">
+                <div class="gallery-hover-description">
+                    <h3>Description</h3>
+                    <p>A yellow bear beanie for kids</p>
+                </div>
+            </div>
+            <h3 class="gallery-item-title">Beanie</h3>
+            <p class="gallery-item-description">Colorful beanie</p>
+            <span class="gallery-item-category">Caps</span>
+            <br><br>
+            <a class="gallery-link" href="https://www.instagram.com/zara_crochet_work?igsh=ajl2MTV4dHB2NDFi&utm_source=qr"><button class="gallery-order-btn">  Order something similar</button></a>
+        </div>
+
+
+        <div class="gallery-item" data-category="category4">
+            <div class="gallery-hover">
+                <img src="imgs/toy2.heic" alt="">
+                <div class="gallery-hover-description">
+                    <h3>Description</h3>
+                    <p>A set of beautiful flowers</p>
+                </div>
+            </div>
+            <h3 class="gallery-item-title">Toys</h3>
+            <p class="gallery-item-description">Colorful flowers</p>
+            <span class="gallery-item-category">Toys</span>
+            <br><br>
+            <a class="gallery-link" href="https://www.instagram.com/zara_crochet_work?igsh=ajl2MTV4dHB2NDFi&utm_source=qr"><button class="gallery-order-btn">  Order something similar</button></a>
+        </div>
+
+
+        <div class="gallery-item" data-category="category5">
+            <div class="gallery-hover">
+                <img src="imgs/others5.jpg" alt="">
+                <div class="gallery-hover-description">
+                    <h3>Description</h3>
+                    <p>A small crocheted watermelon slice</p>
+                </div>
+            </div>
+            <h3 class="gallery-item-title">Showpiece</h3>
+            <p class="gallery-item-description">Watermelon</p>
+            <span class="gallery-item-category">Others</span>
+            <br><br>
+            <a class="gallery-link" href="https://www.instagram.com/zara_crochet_work?igsh=ajl2MTV4dHB2NDFi&utm_source=qr"><button class="gallery-order-btn">  Order something similar</button></a>
+        </div>
+
+        <div class="gallery-item" data-category="category1">
+            <div class="gallery-hover">
+                <img src="imgs/accessory2.png" alt="">
+                <div class="gallery-hover-description">
+                    <h3>Description</h3>
+                    <p>A set of hairclips designed for kids</p>
+                </div>
+            </div>
+            <h3 class="gallery-item-title">Clips</h3>
+            <p class="gallery-item-description">Colorful clips</p>
+            <span class="gallery-item-category">Accessories</span>
+            <br><br>
+            <a class="gallery-link" href="https://www.instagram.com/zara_crochet_work?igsh=ajl2MTV4dHB2NDFi&utm_source=qr"><button class="gallery-order-btn">  Order something similar</button></a>
+        </div>
+
+
+        <div class="gallery-item" data-category="category5">
+            <div class="gallery-hover">
+                <img src="imgs/others2.jpg" alt="">
+                <div class="gallery-hover-description">
+                    <h3>Description</h3>
+                    <p>A crocheted place mat</p>
+                </div>
+            </div>
+            <h3 class="gallery-item-title">place mat</h3>
+            <p class="gallery-item-description">colorful place mat</p>
+            <span class="gallery-item-category">Others</span>
+            <br><br>
+            <a class="gallery-link" href="https://www.instagram.com/zara_crochet_work?igsh=ajl2MTV4dHB2NDFi&utm_source=qr"><button class="gallery-order-btn">  Order something similar</button></a>
+        </div>
+
+        <div class="gallery-item" data-category="category3">
+            <div class="gallery-hover">
+                <img src="imgs/footwear2.png" alt="">
+                <div class="gallery-hover-description">
+                    <h3>Description</h3>
+                    <p>A pair of sandals with a floral design for kids</p>
+                </div>
+            </div>
+            <h3 class="gallery-item-title">Sandals</h3>
+            <p class="gallery-item-description">Crochet sandals</p>
+            <span class="gallery-item-category">Footwear</span>
+            <br><br>
+            <a class="gallery-link" href="https://www.instagram.com/zara_crochet_work?igsh=ajl2MTV4dHB2NDFi&utm_source=qr"><button class="gallery-order-btn">  Order something similar</button></a>
+        </div>
+
+
+        <div class="gallery-item" data-category="category5">
+            <div class="gallery-hover">
+                <img src="imgs/others1.png" alt="">
+                <div class="gallery-hover-description">
+                    <h3>Description</h3>
+                    <p>A crocheted sweater vest for kids</p>
+                </div>
+            </div>
+            <h3 class="gallery-item-title">Sweater vest</h3>
+            <p class="gallery-item-description">Sweater vest</p>
+            <span class="gallery-item-category">Others</span>
+            <br><br>
+            <a class="gallery-link" href="https://www.instagram.com/zara_crochet_work?igsh=ajl2MTV4dHB2NDFi&utm_source=qr"><button class="gallery-order-btn">  Order something similar</button></a>
+        </div>
+
+        <div class="gallery-item" data-category="category1">
+            <div class="gallery-hover">
+                <img src="imgs/accessory3.png" alt="">
+                <div class="gallery-hover-description">
+                    <h3>Description</h3>
+                    <p>A clip with a cute bow design</p>
+                </div>
+            </div>
+            <h3 class="gallery-item-title">Clips</h3>
+            <p class="gallery-item-description">Colorful clips</p>
+            <span class="gallery-item-category">Accessories</span>
+            <br><br>
+            <a class="gallery-link" href="https://www.instagram.com/zara_crochet_work?igsh=ajl2MTV4dHB2NDFi&utm_source=qr"><button class="gallery-order-btn">  Order something similar</button></a>
+        </div>
+
+
+        <div class="gallery-item" data-category="gallery-category1">
+            <div class="hover">
+                <img src="imgs/accessory4.jpg" alt="">
+                <div class="gallery-hover-description">
+                    <h3>Description</h3>
+                    <p>A set of beautiful dark blue earrings with circular designs</p>
+                </div>
+            </div>
+            <h3 class="gallery-item-title">Earrings</h3>
+            <p class="gallery-item-description">Colorful earrings</p>
+            <span class="gallery-item-category">Accessories</span>
+            <br><br>
+            <a class="gallery-link" href="https://www.instagram.com/zara_crochet_work?igsh=ajl2MTV4dHB2NDFi&utm_source=qr"><button class="gallery-order-btn">  Order something similar</button></a>
+        </div>
+
+        <div class="gallery-item" data-category="category4">
+            <div class="gallery-hover">
+                <img src="imgs/toy3.jpg" alt="">
+                <div class="gallery-hover-description">
+                    <h3>Description</h3>
+                    <p>A crocheted mushroom</p>
+                </div>
+            </div>
+            <h3 class="gallery-item-title">Toys</h3>
+            <p class="gallery-item-description">Yellow mushroom</p>
+            <span class="gallery-item-category">Toys</span>
+            <br><br>
+            <a class="gallery-link" href="https://www.instagram.com/zara_crochet_work?igsh=ajl2MTV4dHB2NDFi&utm_source=qr"><button class="gallery-order-btn">  Order something similar</button></a>
+        </div>
+
+
+        <div class="gallery-item" data-category="category2">
+            <div class="gallery-hover">
+                <img src="imgs/cap2.png" alt="">
+                <div class="gallery-hover-description">
+                    <h3>Description</h3>
+                    <p>A peach and white colored beanie for kids</p>
+                </div>
+            </div>
+            <h3 class="gallery-item-title">Beanie</h3>
+            <p class="gallery-item-description">Colorful beanie</p>
+            <span class="gallery-item-category">Caps</span>
+            <br><br>
+            <a class="gallery-link" href="https://www.instagram.com/zara_crochet_work?igsh=ajl2MTV4dHB2NDFi&utm_source=qr"><button class="gallery-order-btn">  Order something similar</button></a>
+        </div>
+
+        <div class="gallery-item" data-category="category3">
+            <div class="gallery-hover">
+                <img src="imgs/footwear1.png" alt="">
+                <div class="gallery-hover-description">
+                    <h3>Description</h3>
+                    <p>A pair of pink sandals with a bow for kids</p>
+                </div>
+            </div>
+            <h3 class="gallery-item-title">Sandals</h3>
+            <p class="gallery-item-description">Crochet sandals</p>
+            <span class="gallery-item-category">Footwear</span>
+            <br><br>
+            <a class="gallery-link" href="https://www.instagram.com/zara_crochet_work?igsh=ajl2MTV4dHB2NDFi&utm_source=qr"><button class="gallery-order-btn">  Order something similar</button></a>
+        </div>
+
+
+        <div class="gallery-item" data-category="category3">
+            <div class="gallery-hover">
+                <img src="imgs/footwear4.jpg" alt="">
+                <div class="gallery-hover-description">
+                    <h3>Description</h3>
+                    <p>A pair of crocheted boots for kids</p>
+                </div>
+            </div>
+            <h3 class="gallery-item-title">Boots</h3>
+            <p class="gallery-item-description">Crochet sandals</p>
+            <span class="gallery-item-category">Footwear</span>
+            <br><br>
+            <a class="gallery-link" href="https://www.instagram.com/zara_crochet_work?igsh=ajl2MTV4dHB2NDFi&utm_source=qr"><button class="gallery-order-btn">  Order something similar</button></a>
+        </div>
+
+
+        <div class="gallery-item" data-category="category1">
+            <div class="gallery-hover">
+                <img src="imgs/accessory5.jpg" alt="">
+                <div class="gallery-hover-description">
+                    <h3>Description</h3>
+                    <p>A set of beautiful earrings with a unique designs</p>
+                </div>
+            </div>
+            <h3 class="gallery-item-title">Earrings</h3>
+            <p class="gallery-item-description">Colorful earrings</p>
+            <span class="gallery-item-category">Accessories</span>
+            <br><br>
+            <a class="gallery-link" href="https://www.instagram.com/zara_crochet_work?igsh=ajl2MTV4dHB2NDFi&utm_source=qr"><button class="gallery-order-btn">  Order something similar</button></a>
+        </div>
+
+
+        <div class="gallery-item" data-category="category3">
+            <div class="gallery-hover">
+                <img src="imgs/footwear3.jpg" alt="">
+                <div class="gallery-hover-description">
+                    <h3>Description</h3>
+                    <p>A pair of sandals with a floral design for kids</p>
+                </div>
+            </div>
+            <h3 class="gallery-item-title">Sandals</h3>
+            <p class="gallery-item-description">Crochet sandals</p>
+            <span class="gallery-item-category">Footwear</span>
+            <br><br>
+            <a class="gallery-link" href="https://www.instagram.com/zara_crochet_work?igsh=ajl2MTV4dHB2NDFi&utm_source=qr"><button class="gallery-order-btn">  Order something similar</button></a>
+        </div>
+
+        <div class="gallery-item" data-category="category2">
+            <div class="gallery-hover">
+                <img src="imgs/cap1.png" alt="">
+                <div class="gallery-hover-description">
+                    <h3>Description</h3>
+                    <p>A colorful beanie for kids</p>
+                </div>
+            </div>
+            <h3 class="gallery-item-title">Beanie</h3>
+            <p class="gallery-item-description">Colorful beanie</p>
+            <span class="gallery-item-category">Caps</span>
+            <br><br>
+            <a class="gallery-link" href="https://www.instagram.com/zara_crochet_work?igsh=ajl2MTV4dHB2NDFi&utm_source=qr"><button class="gallery-order-btn">  Order something similar</button></a>
+        </div>
+
+        <div class="gallery-item" data-category="category5">
+            <div class="gallery-hover">
+                <img src="imgs/others7.jpg" alt="">
+                <div class="gallery-hover-description">
+                    <h3>Description</h3>
+                    <p>A crocheted cute white frock for kids</p>
+                </div>
+            </div>
+            <h3 class="gallery-item-title">Frock</h3>
+            <p class="gallery-item-description">white frock</p>
+            <span class="gallery-item-category">Others</span>
+            <br><br>
+            <a class="gallery-link" href="https://www.instagram.com/zara_crochet_work?igsh=ajl2MTV4dHB2NDFi&utm_source=qr"><button class="gallery-order-btn">  Order something similar</button></a>
+        </div>
+
+        <div class="gallery-item" data-category="category5">
+            <div class="gallery-hover">
+                <img src="imgs/others8.jpg" alt="">
+                <div class="gallery-hover-description">
+                    <h3>Description</h3>
+                    <p>A crocheted plant holder</p>
+                </div>
+            </div>
+            <h3 class="gallery-item-title">Plant holder</h3>
+            <p class="gallery-item-description">Plant holder</p>
+            <span class="gallery-item-category">Others</span>
+            <br><br>
+           <a href="https://www.instagram.com/zara_crochet_work?igsh=ajl2MTV4dHB2NDFi&utm_source=qr"><button class="gallery-order-btn">  Order something similar</button></a>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        var filterButtons = document.querySelectorAll(".filter-btn-gallery");
+        var galleryItems = document.querySelectorAll(".gallery-item");
+
+
+        function handleFilterClick(event) {
+            var selectedCategory = event.target.getAttribute("data-filter");
+
+            for (var i = 0; i < filterButtons.length; i++) {
+                filterButtons[i].classList.remove("active");
+            }
+
+
+            event.target.classList.add("active");
+            for (var j = 0; j < galleryItems.length; j++) {
+                var item = galleryItems[j];
+                var itemCategory = item.getAttribute("data-category");
+
+                if (selectedCategory === "all" || itemCategory === selectedCategory) {
+                    item.classList.remove("hidden");
+                } else {
+                    item.classList.add("hidden");
+                }
+            }
+        }
+
+        for (var k = 0; k < filterButtons.length; k++) {
+            filterButtons[k].addEventListener("click", handleFilterClick);
+        }
+    </script>
+</body>
+
+</html>

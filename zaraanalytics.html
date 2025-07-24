@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analytics | Zara Crochet Work</title>
+  <link rel="stylesheet" href="stylesheet.css">
+ <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+  </style>
+</head>
+<body>
+
+  <rc-header>
+    <h1>Analytics Dashboard</h1>
+  </rc-header>
+
+  <div class="rc-container">
+
+    <div class="rc-card">
+      <h2>Contact Page Visits</h2>
+      <div class="rc-value" id="rc-visitCount">0</div>
+    </div>
+
+    <div class="rc-card">
+      <h2>Contact Form Submissions</h2>
+      <div class="rc-value" id="rc-submissionCount">0</div>
+    </div>
+
+    <div class="rc-reset-wrapper">
+      <button class="rc-btn" onclick="rcResetStats()">Reset Stats</button>
+    </div>
+
+  </div>
+
+  <rc-footer>
+    <p>For internal use only. Data is stored in this browser's local storage.</p>
+  </rc-footer>
+
+  <script>
+    // Fetch values from localStorage
+    const visits = localStorage.getItem("contactPageVisits") || 0;
+    const submissions = localStorage.getItem("contactSubmissions") || 0;
+
+    // Display values
+    document.getElementById("rc-visitCount").textContent = visits;
+    document.getElementById("rc-submissionCount").textContent = submissions;
+
+    // Reset function
+    function rcResetStats() {
+      localStorage.setItem("contactPageVisits", 0);
+      localStorage.setItem("contactSubmissions", 0);
+      document.getElementById("rc-visitCount").textContent = 0;
+      document.getElementById("rc-submissionCount").textContent = 0;
+      alert("Analytics stats have been reset.");
+    }
+  </script>
+
+</body>
+</html>
+

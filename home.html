@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zara Crochet Works</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="stylesheet.css">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="home-main-header">
+    <div class="home-container home-header-container">
+      <h1 class="home-logo">Zara Crochet Works</h1>
+      <nav>
+        <ul class="home-nav-links">
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="tipsfacts.html">Crochet Tips</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">How to Order</a></li>
+          <li><a href="zaracontact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="home-signup-btn" id="home-open-popup">Sign Up</a>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section id="home-landing-banner">
+    <div class="home-container home-banner-content">
+      <div class="home-text">
+        <h2>Beautiful Handmade Crochet</h2>
+        <p>Each piece is unique and made with love. Order via Instagram or phone.</p>
+        <button class="home-cta-btn">Explore More</button>
+      </div>
+      <div class="home-image-box"></div>
+    </div>
+  </section>
+
+  <!-- Best Sellers -->
+  <section id="home-best-sellers" class="home-container">
+    <h2 class="home-section-title">Best Selling Products</h2>
+    <div class="home-flex-row">
+      <div class="home-product-card">
+        <div class="home-product-img"></div>
+        <h3>Hat</h3>
+        <p>Soft and stylish crochet hats.</p>
+      </div>
+      <div class="home-product-card">
+        <div class="home-product-img"></div>
+        <h3>Bag</h3>
+        <p>Trendy handmade bags.</p>
+      </div>
+      <div class="home-product-card">
+        <div class="home-product-img"></div>
+        <h3>Scarf</h3>
+        <p>Warm and cozy scarves.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section id="home-our-story">
+    <div class="home-container home-story-content">
+      <h2>Our Story</h2>
+      <p>Discover the passion and story behind our handcrafted crochet.</p>
+      <button class="home-cta-btn">Know More About the Artist</button>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="home-gallery" class="home-container">
+    <h2 class="home-section-title">Gallery</h2>
+    <div class="home-gallery-grid">
+      <a href="#"><div class="home-gallery-img"></div></a>
+      <a href="#"><div class="home-gallery-img"></div></a>
+      <a href="#"><div class="home-gallery-img"></div></a>
+      <a href="#"><div class="home-gallery-img"></div></a>
+      <a href="#"><div class="home-gallery-img"></div></a>
+      <a href="#"><div class="home-gallery-img"></div></a>
+    </div>
+  </section>
+
+  <!-- Blogs -->
+  <section id="home-blogs" class="home-container">
+    <h2 class="home-section-title">Crochet Tips & Techniques</h2>
+    <div class="home-flex-row">
+      <div class="home-blog-card">
+        <h3>Choosing the Right Yarn</h3>
+        <p>Tips to pick the best yarn for your projects.</p>
+      </div>
+      <div class="home-blog-card">
+        <h3>Essential Crochet Tools</h3>
+        <p>Beginner tools you should own.</p>
+      </div>
+      <div class="home-blog-card">
+        <h3>Advanced Stitching</h3>
+        <p>Master techniques for pros.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="home-main-footer">
+    <p>&copy; 2025 Crochet Crafts. All rights reserved.</p>
+  </footer>
+
+  <!-- Popup Modal -->
+  <div id="home-signup-popup" class="home-popup-overlay">
+    <div class="home-popup-content">
+      <span id="home-close-popup">&times;</span>
+      <h2>Join Our Community</h2>
+      <form id="home-signup-form">
+        <input type="text" id="home-name" placeholder="Your Name" required>
+        <input type="email" id="home-email" placeholder="Your Email" required>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="home-success-message" class="home-hidden">Thank you for signing up!</p>
+    </div>
+  </div>
+
+  <script>
+    // Elements
+    const openBtn = document.getElementById('home-open-popup');
+    const closeBtn = document.getElementById('home-close-popup');
+    const popup = document.getElementById('home-signup-popup');
+    const form = document.getElementById('home-signup-form');
+    const successMsg = document.getElementById('home-success-message');
+
+    // Open Popup
+    function openPopup(e) {
+      e.preventDefault();
+      popup.style.display = 'flex';
+      successMsg.classList.add('home-hidden');
+      form.style.display = 'block';
+      form.reset();
+    }
+
+    // Close Popup
+    function closePopup() {
+      popup.style.display = 'none';
+    }
+
+    // Click Outside Popup
+    function clickOutsideToClose(e) {
+      if (e.target === popup) {
+        closePopup();
+      }
+    }
+
+    // Submit Form
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('home-name').value.trim();
+      const email = document.getElementById('home-email').value.trim();
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!name) {
+        alert("Please enter your name.");
+        return;
+      }
+      if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      form.style.display = 'none';
+      successMsg.classList.remove('home-hidden');
+
+      setTimeout(() => {
+        closePopup();
+        form.style.display = 'block';
+      }, 2000);
+    }
+
+    // Listeners
+    openBtn.addEventListener('click', openPopup);
+    closeBtn.addEventListener('click', closePopup);
+    window.addEventListener('click', clickOutsideToClose);
+    form.addEventListener('submit', handleFormSubmit);
+  </script>
+</body>
+</html>

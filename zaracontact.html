@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Zara Crochet Work</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display&family=swap" rel="stylesheet">
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --light-beige: #FFF5E6;
+      --pink: #F88FB1;
+      --purple: #9B5DE5;
+      --button-hover: #9B5DE5;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      margin: 0;
+      background-color: var(--light-beige);
+      color: var(--purple);
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: var(--light-beige);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .rc-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    .rc-card {
+      background-color: var(--white);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 8px;
+      margin-top: 16px;
+      font-weight: bold;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--purple);
+      border-radius: 8px;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    form textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    .rc-btn {
+      margin-top: 24px;
+      background-color: var(--pink);
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .rc-btn:hover {
+      background-color: var(--button-hover);
+    }
+
+    .rc-message {
+      margin-top: 16px;
+      color: var(--pink);
+      font-weight: bold;
+    }
+
+    .rc-social-links {
+      margin-top: 16px;
+      display: flex;
+      gap: 16px;
+    }
+
+    .rc-social-links a {
+      color: var(--pink);
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: 2px solid transparent;
+      transition: color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .rc-social-links a:hover {
+      color: var(--button-hover);
+      border-color: var(--button-hover);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Contact Zara Crochet Work</h1>
+  </header>
+
+  <div class="rc-container">
+    <!-- Contact Form Card -->
+    <div class="rc-card">
+      <h2>We’d love to hear from you!</h2>
+      <form id="contactForm">
+        <label for="name">Name *</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" required />
+
+        <label for="subject">Subject *</label>
+        <input type="text" id="subject" required />
+
+        <label for="message">Message *</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit" class="rc-btn">Send Message</button>
+        <div id="formMessage" class="rc-message"></div>
+      </form>
+    </div>
+
+    <!-- Social Media Links Card -->
+    <div class="rc-card">
+      <h2>Connect with us</h2>
+      <p>Follow Zara Crochet Work for updates, new designs, and behind-the-scenes!</p>
+      <div class="rc-social-links">
+        <a href="https://www.instagram.com/zara_crochet_work?igsh=cmpycng5aTc3YnVn" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const subject = document.getElementById("subject").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const formMessage = document.getElementById("formMessage");
+
+      if (!name || !email || !subject || !message) {
+        formMessage.textContent = "Please fill in all fields.";
+        formMessage.style.color = "red";
+        return;
+      }
+
+      formMessage.textContent = "Thank you for your message! We'll get back to you soon.";
+      formMessage.style.color = "var(--pink)";
+
+      // Track form submission
+      let count = localStorage.getItem("contactSubmissions");
+      localStorage.setItem("contactSubmissions", count ? parseInt(count) + 1 : 1);
+
+      // Reset the form
+      document.getElementById("contactForm").reset();
+    });
+
+    // Track page visit
+    let visits = localStorage.getItem("contactPageVisits");
+    localStorage.setItem("contactPageVisits", visits ? parseInt(visits) + 1 : 1);
+  </script>
+
+</body>
+</html>
+
