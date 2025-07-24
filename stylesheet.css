@@ -642,7 +642,6 @@ background-color: #af2a54;
 
 
 /* ABOUT US PAGE STYLING BEGINS */
-
 .aumain-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -730,7 +729,7 @@ background-color: #af2a54;
 .auflexcontainer {
     max-width: 400px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -784,6 +783,10 @@ background-color: #490c94;
 .aulink:hover {
     color: #9b5de5;
     text-decoration: underline;
+}
+.auwelcome-section {
+    padding: 50px 20px;
+    text-align: center;
 }
 
 
