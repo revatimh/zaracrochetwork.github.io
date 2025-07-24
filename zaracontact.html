@@ -5,117 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | Zara Crochet Work</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display&family=swap" rel="stylesheet">
-  <style>
-    :root {
-      --white: #FFFFFF;
-      --light-beige: #FFF5E6;
-      --pink: #F88FB1;
-      --purple: #9B5DE5;
-      --button-hover: #9B5DE5;
-    }
-
-    body {
-      font-family: 'Nunito', sans-serif;
-      margin: 0;
-      background-color: var(--light-beige);
-      color: var(--purple);
-    }
-
-    header {
-      padding: 20px;
-      text-align: center;
-      background-color: var(--light-beige);
-    }
-
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      margin: 0;
-      font-size: 36px;
-    }
-
-    .rc-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 60px 20px;
-    }
-
-    .rc-card {
-      background-color: var(--white);
-      border-radius: 12px;
-      padding: 24px;
-      margin-bottom: 40px;
-    }
-
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      margin-bottom: 16px;
-    }
-
-    form label {
-      display: block;
-      margin-bottom: 8px;
-      margin-top: 16px;
-      font-weight: bold;
-    }
-
-    form input,
-    form textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid var(--purple);
-      border-radius: 8px;
-      font-family: 'Nunito', sans-serif;
-    }
-
-    form textarea {
-      resize: vertical;
-      height: 120px;
-    }
-
-    .rc-btn {
-      margin-top: 24px;
-      background-color: var(--pink);
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 20px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .rc-btn:hover {
-      background-color: var(--button-hover);
-    }
-
-    .rc-message {
-      margin-top: 16px;
-      color: var(--pink);
-      font-weight: bold;
-    }
-
-    .rc-social-links {
-      margin-top: 16px;
-      display: flex;
-      gap: 16px;
-    }
-
-    .rc-social-links a {
-      color: var(--pink);
-      text-decoration: none;
-      font-weight: bold;
-      border-bottom: 2px solid transparent;
-      transition: color 0.3s ease, border-color 0.3s ease;
-    }
-
-    .rc-social-links a:hover {
-      color: var(--button-hover);
-      border-color: var(--button-hover);
-    }
-  </style>
 </head>
 <body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a class="aulink" href="#" class="logo">Zara Crochet</a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a class="aulink" href="index.html" class="nav-link">Home</a></li>
+        <li><a class="aulink" href="about.html" class="nav-link">About</a></li>
+        <li><a class="aulink" href="tipsfacts.html" class="nav-link">Tips and Facts</a></li>
+        <li><a class="aulink" href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a class="aulink" href="zaracontact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
 
   <header>
     <h1>Contact Zara Crochet Work</h1>
